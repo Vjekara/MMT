@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rukomet</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+  <header class="bg-green-600 text-white p-6 shadow-md">
+    <h1 class="text-4xl font-bold text-center">Rukomet</h1>
+     <div class="mt-4 flex justify-center space-x-4">
+    <a href="Pocetna.html" class="bg-white text-blue-600 font-semibold px-4 py-2 rounded-lg shadow hover:bg-gray-100 transition">Povratak na pocetnu</a>
+  </div>
+  </header>
+
+  <main class="p-6 max-w-4xl mx-auto">
+    <section class="mb-10">
+
+      <h2 class="text-2xl font-semibold mb-2">Što je Rukomet?</h2>
+      <p class="text-lg">Rukomet je dinamičan timski sport koji se igra između dvije momčadi sa po sedam igrača, uključujući vratara.
+      Igra se u zatvorenom prostoru na terenu dimenzija 40x20 metara s golovima na oba kraja. Cilj igre je postići što više pogodaka bacanjem lopte u protivnički gol.
+      Utakmica traje 60 minuta i podijeljena je na dva poluvremena po 30 minuta. Igrači smiju držati loptu najviše tri sekunde i napraviti najviše tri koraka bez vođenja lopte. 
+      Lopta se vodi odskakivanjem od poda, slično kao u košarci. Prekršaji se sankcioniraju slobodnim bacanjem, sedmercem ili isključenjem igrača na dvije minute. 
+      Vratari smiju koristiti cijelo tijelo za obranu, ali samo unutar svog prostora. 
+      Rukomet zahtijeva brzinu, snagu, preciznost i dobru suradnju među suigračima. Pobjednik je momčad s više pogodaka na kraju utakmice.
+      </p>
+      <a href="https://www.olympics.com/en/news/handball-game-rules-regulations-how-to-play">-Pravila |</a>
+    </section>
+
+
+
+    <section class="mb-10">
+      <h2 class="text-2xl font-semibold mb-4">Rukomet u slikama</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <img src="slike/mirko.jpg" alt="Rukomet"  width="500" height="500"
+     class="w-64  h-40 cursor-pointer rounded shadow-md hover:scale-105 transition"
+     onclick="openModal(this.src)" />
+<img src="slike/balic.jpeg" alt="Rukomet" width="500" height="500"
+     class="w-64  h-40 cursor-pointer rounded shadow-md hover:scale-105 transition"
+     onclick="openModal(this.src)" />
+<img  src="slike/cupic.jpg" alt="Rukomet" width="500" height="500"
+     class="w-64  h-40 cursor-pointer rounded shadow-md hover:scale-105 transition"
+     onclick="openModal(this.src)" />
+      </div>
+    </section>
+        <section class="mb-10">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <img src="slike/duvnjak.jpeg" alt="Rukomet"  width="500" height="500"
+     class="w-64 h-40 cursor-pointer rounded shadow-md hover:scale-105 transition"
+     onclick="openModal(this.src)" />
+<img src="slike/ran.webp" alt="Rukomet" width="500" height="500"
+     class="w-64  h-40 cursor-pointer rounded shadow-md hover:scale-105 transition"
+     onclick="openModal(this.src)" />
+<img  src="slike/butra.jpg" alt="Rukomet" width="500" height="500"
+     class="w-64  h-40 cursor-pointer rounded shadow-md hover:scale-105 transition"
+     onclick="openModal(this.src)" />
+      </div>
+
+
+
+
+
+
+  <footer class="bg-gray-200 p-4 mt-10 text-center text-sm text-gray-600">
+   Napravljeno za MMT 2025 u sklopu FERIT-a
+  </footer>
+
+
+
+  </main>
+
+
+
+
+
+
+  <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-80 hidden items-center justify-center z-50">
+  <span onclick="closeModal()" class="absolute top-6 right-6 text-white text-3xl cursor-pointer">&times;</span>
+  <img id="modalImg" class="max-h-[90vh] max-w-[90vw] rounded shadow-lg border-4 border-white" />
+</div>
+
+
+<script>
+  function prikaziAutora() {
+    const info = document.getElementById("autorInfo");
+    info.classList.toggle("hidden");
+  }
+</script>
+
+
+<script>
+  function openModal(src) {
+    document.getElementById("modalImg").src = src;
+    document.getElementById("imageModal").classList.remove("hidden");
+    document.getElementById("imageModal").classList.add("flex");
+  }
+
+  function closeModal() {
+    document.getElementById("imageModal").classList.add("hidden");
+  }
+</script>
+</body>
+</html>
